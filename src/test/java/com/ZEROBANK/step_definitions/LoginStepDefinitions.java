@@ -16,6 +16,7 @@ public class LoginStepDefinitions {
 
     @When("the user enters valid login credentials and clicks signin")
     public void the_user_enters_valid_login_credentials_and_clicks_signin() {
+        BrowserUtils.waitForClickablility(loginPage.loginButton, 5);
         loginPage.successfulLogin();
     }
 

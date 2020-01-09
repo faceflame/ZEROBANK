@@ -16,7 +16,10 @@ public class PayBillsStepDefinitions {
 
     @When("the user clicks on Pay Bills tab")
     public void the_user_clicks_on_Pay_Bills_tab() {
+
         BrowserUtils.waitForClickablility(payBillsPage.payBillstab, 5);
+
+
         payBillsPage.payBillstab.click();
     }
 
