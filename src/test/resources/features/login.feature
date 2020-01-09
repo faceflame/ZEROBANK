@@ -1,6 +1,7 @@
 @login
 Feature: Login
-  Background:the user is on the login page
+  Background:
+  Given the user is on the login page
 
   @successful_login
   Scenario: User should successfully login with valid credentials

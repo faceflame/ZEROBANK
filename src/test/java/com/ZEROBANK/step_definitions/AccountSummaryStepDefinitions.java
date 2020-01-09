@@ -16,6 +16,7 @@ public class AccountSummaryStepDefinitions {
     @When("the user is on Account Summary page")
     public void the_user_is_on_Account_Summary_page() {
         loginPage.successfulLogin();
+
     }
 
     @Then("the system should display the page title as {string}")

@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         glue ="com/ZEROBANK/step_definitions",
         monochrome = true,
         dryRun = false,
-        tags = "@succesful_pay_bills"
+        tags = "@payment_with_missing_amount_or_date"
 
 
 )
