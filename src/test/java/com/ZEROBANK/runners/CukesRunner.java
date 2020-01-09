@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
         features ="src/test/resources/features",
         glue ="com/ZEROBANK/step_definitions",
         monochrome = true,
-        tags = "@login"
+        dryRun = false,
+        tags = "@succesful_pay_bills"
 
 
 )
