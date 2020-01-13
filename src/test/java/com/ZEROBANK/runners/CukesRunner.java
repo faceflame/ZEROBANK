@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         glue ="com/ZEROBANK/step_definitions",
         monochrome = true,
         dryRun = false,
-        tags = "@smoke"
+        tags = "@pay_bills"
 
 
 )
