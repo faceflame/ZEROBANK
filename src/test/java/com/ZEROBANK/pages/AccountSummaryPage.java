@@ -16,9 +16,6 @@ public class AccountSummaryPage extends BasePage{
     @FindBy(xpath = "(//div[@class='board-content']/table/thead)[3]/tr/th")
     public List<WebElement>creditAccountTitles;
 
-
-
-
     @FindBy(xpath = "//a[contains(text(), 'Brokerage')]")
     public WebElement brokerageLink;
 

@@ -5,7 +5,6 @@ import com.ZEROBANK.utilities.Driver;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import org.junit.AfterClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -17,7 +16,7 @@ public class hooks {
     public void setup() {
         String url = ConfigurationReader.get("url");
         Driver.get().manage().window().maximize();
-        Driver.get().get(url);
+        Driver.get().get(ConfigurationReader.get("url"));
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Driver.get().findElement(By.id("signin_button")).click();
     }

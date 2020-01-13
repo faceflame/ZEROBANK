@@ -19,8 +19,10 @@ public class PayBillsStepDefinitions {
 
         BrowserUtils.waitForClickablility(payBillsPage.payBillstab, 5);
 
+        payBillsPage.navigateToTab("Pay Bills Page");
 
-        payBillsPage.payBillstab.click();
+
+
     }
 
     @Then("the page title should be {string}")

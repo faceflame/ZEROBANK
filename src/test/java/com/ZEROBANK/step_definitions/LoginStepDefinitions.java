@@ -4,6 +4,7 @@ import com.ZEROBANK.pages.LoginPage;
 import com.ZEROBANK.utilities.BrowserUtils;
 import com.ZEROBANK.utilities.ConfigurationReader;
 import com.ZEROBANK.utilities.Driver;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -14,14 +15,22 @@ import java.util.concurrent.TimeUnit;
 public class LoginStepDefinitions {
     LoginPage loginPage = new LoginPage();
 
+    @Given("the user is on the login page")
+    public void the_user_is_on_the_login_page() {
+        loginPage.loginButton.isDisplayed();
+    }
+
+
     @When("the user enters valid login credentials and clicks signin")
     public void the_user_enters_valid_login_credentials_and_clicks_signin() {
         BrowserUtils.waitForClickablility(loginPage.loginButton, 5);
+
         loginPage.successfulLogin();
     }
 
     @Then("the system should display {string}")
     public void the_system_should_display(String pageTitle) {
+
         Assert.assertEquals(pageTitle, Driver.get().getTitle());
     }
 
