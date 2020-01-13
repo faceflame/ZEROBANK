@@ -1,4 +1,4 @@
-@account_summary
+@account_summary @smoke
 Feature: Account Summary
 
   Background:

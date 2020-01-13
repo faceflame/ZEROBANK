@@ -1,4 +1,4 @@
-@pay_bills
+@pay_bills @smoke
 Feature: Pay Bills
 
   Background:
