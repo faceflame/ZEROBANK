@@ -42,6 +42,7 @@ public class PayBillsPage extends BasePage {
         Select select = new Select(payeeDropdown);
         select.selectByVisibleText(payee);
         Select select1 = new Select(accountDropdown);
+
         select1.selectByVisibleText(accountType);
         amountBox.sendKeys(amount);
         dateBox.sendKeys(date_YYYY_MM_DD);
