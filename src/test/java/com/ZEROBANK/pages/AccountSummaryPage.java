@@ -32,6 +32,8 @@ public class AccountSummaryPage extends BasePage{
     public WebElement LoanLink;
 
 
+    //A new line is added
+
     public String getPageTitle(){
         String actualPageTitle=Driver.get().getTitle();
         return actualPageTitle;
