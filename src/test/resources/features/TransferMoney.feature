@@ -1,4 +1,4 @@
-@transfer_money
+@transfer_money @smoke
 Feature: Transfer Money
 
   Scenario: User should be able to transfer money successfully

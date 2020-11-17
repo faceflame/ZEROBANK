@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-import java.util.List;
+import java.util.*;
 
 public class AccountSummaryStepDefinitions {
     LoginPage loginPage = new LoginPage();
@@ -15,6 +15,10 @@ public class AccountSummaryStepDefinitions {
 
     @When("the user is on Account Summary page")
     public void the_user_is_on_Account_Summary_page() {
+        LoginPage loginPage = new LoginPage();
+        loginPage.loginMethod();
+
+
         loginPage.successfulLogin();
 
     }
@@ -24,12 +28,22 @@ public class AccountSummaryStepDefinitions {
 
        // String actualPageTitle= Driver.get().getTitle();
         //Assert.assertEquals(expectedPageTitle, actualPageTitle);
+/*
+        Set<String> tabs=Driver.get().getWindowHandles();
+        Iterator<String>iterator= tabs.iterator();
+
+while (iterator.hasNext()){
+
+}
+*/
 
         Assert.assertEquals(expectedPageTitle, accountSummaryPage.getPageTitle());
     }
 
     @Then("the user should be able to see the following account types")
     public void the_user_should_be_able_to_see_the_following_account_types(List<String> expectedAccountTypes) {
+
+        System.out.println(expectedAccountTypes);
         Assert.assertEquals(expectedAccountTypes, accountSummaryPage.getTableTitles());
     }
 

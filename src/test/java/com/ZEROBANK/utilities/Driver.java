@@ -2,6 +2,7 @@ package com.ZEROBANK.utilities;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +15,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+
+import java.net.URL;
 
 public class Driver {
     private Driver() {
@@ -32,6 +35,15 @@ public class Driver {
 
             logger.info("Creating webdriver for - " + browser);
             switch (browser) {
+                case "remote_chrome":
+                    try {
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.setCapability("platform", Platform.ANY);
+                        driverPool.set(new RemoteWebDriver(new URL("ec2-54-159-124-34.compute-1.amazonaws.com:4444/wd/hub"), chromeOptions));
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                    break;
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
