@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/ZEROBANK/step_definitions",
         dryRun = false,
-        tags= "@smoke"
+        tags= "@succesful_pay_bills"
 
 
 )
